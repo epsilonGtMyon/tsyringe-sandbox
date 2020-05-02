@@ -42,6 +42,9 @@ module.exports = (env, args) => {
                 }
             ]
         },
+        resolve: {
+            extensions: ['.js', '.jsx', '.ts', '.tsx']
+        },
         plugins: [
             ...htmlWebpackPlugin()
         ],

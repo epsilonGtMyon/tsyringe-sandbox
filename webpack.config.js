@@ -2,17 +2,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const srcRoot = path.resolve(__dirname, "src")
+const entryArray = ["sandbox01", "sandbox02", "sandbox03"]
+    .map(x => `app/${x}`)
 
-const entryArray = ["sandbox01", "sandbox02"]
-                    .map(x => `app/${x}`)
-
+//reduceでいけそうやけど..
 const entries = {}
 for (let ent of entryArray) {
     entries[ent] = `${srcRoot}/${ent}/index.ts`
 }
 
-
-console.log({ entries })
 
 //https://github.com/jantimon/html-webpack-plugin/issues/218
 function htmlWebpackPlugin() {

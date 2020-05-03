@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const srcRoot = path.resolve(__dirname, "src")
-const entryArray = ["sandbox01", "sandbox02", "sandbox03"]
+const entryArray = ["sandbox01", "sandbox02", "sandbox03", "sandbox04"]
     .map(x => `app/${x}`)
 
 //reduceでいけそうやけど..

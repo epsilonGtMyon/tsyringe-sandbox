@@ -3,7 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const srcRoot = path.resolve(__dirname, "src")
 
-const entryArray = ["app/sandbox01"]
+const entryArray = ["sandbox01", "sandbox02"]
+                    .map(x => `app/${x}`)
 
 const entries = {}
 for (let ent of entryArray) {

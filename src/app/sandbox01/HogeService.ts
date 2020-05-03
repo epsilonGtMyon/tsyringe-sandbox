@@ -1,6 +1,7 @@
 import { injectable } from "tsyringe";
 import FooService from "./FooService";
 
+//もしinjectableをつけてないのFooServiceが解決できない
 @injectable()
 export default class HogeService {
 

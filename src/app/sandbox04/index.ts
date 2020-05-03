@@ -1,3 +1,4 @@
+//providerを試す
 import "reflect-metadata";
 import { container } from "tsyringe";
 import { keyBarLogic } from "./bar/BarLogic"
@@ -10,3 +11,5 @@ container.register(keyBarLogic, { useClass: BarLogicImpl })
 
 const fooService = container.resolve(FooService);
 fooService.doService()
+
+//あとは Factory provider, Token Providerがあるが試してない
